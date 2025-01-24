@@ -6,6 +6,7 @@ public class practice {
 
     // 2-) Senaryo: Amazon ana sayfasını açın, "Ara" butonunu locate edin ve tıklanabilir olduğunu doğrulayın.
     //Locator Yöntemi: id
+    //Locator Yöntemi2: id ve css
 
     // 3-) Senaryo: Facebook giriş sayfasını açın, "Giriş Yap" butonunu locate edin ve metninin "Giriş Yap" olduğunu doğrulayın.
     //Locator Yöntemi: name
