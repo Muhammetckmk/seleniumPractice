@@ -1,4 +1,4 @@
-package annotation_locator;
+package practices.annotation_locator;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;

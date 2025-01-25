@@ -1,4 +1,4 @@
-package annotation_locator;
+package practices.annotation_locators;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
