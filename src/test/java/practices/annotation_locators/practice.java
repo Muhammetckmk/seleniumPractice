@@ -60,9 +60,15 @@ public class practice extends TestBase {
     }
 
 
-    // 5-)Senaryo: Twitter giriş sayfasını açın, şifre alanını locate edin ve içeriğinin boş olduğunu doğrulayın.
+    // 5-)Senaryo: facebook giriş sayfasını açın, şifre alanını locate edin ve içeriğinin boş olduğunu doğrulayın.
     //Locator Yöntemi: xpath
-
+    @Test
+    void test05() throws InterruptedException {
+        driver.get("https://facebook.com");
+        Thread.sleep(5000);
+        WebElement pass = driver.findElement(By.xpath("//input[@id='pass']"));
+        Assertions.assertNull(pass.getText());
+    }
 
     // 6-)Senaryo: YouTube ana sayfasını açın, arama kutusunu locate edin ve placeholder metninin "Search" olduğunu doğrulayın.
     //Locator Yöntemi: name
