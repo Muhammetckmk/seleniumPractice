@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1779f2f0-03fb-4773-b4e9-7efcd6f004b2" name="Changes" comment="" />
+    <list default="true" id="1779f2f0-03fb-4773-b4e9-7efcd6f004b2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/annotations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/annotations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,19 +35,22 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.practice.test05.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.practice.test01.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.practice.test02.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.practice.test03.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.practice.test04.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="practice.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="JUnit.practice">
+    <configuration name="practice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumPractices" />
       <extension name="coverage">
         <pattern>
@@ -50,7 +60,70 @@
       </extension>
       <option name="PACKAGE_NAME" value="practices.annotation_locators" />
       <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
-      <option name="METHOD_NAME" value="test05" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="practice.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="practice.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="practice.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
+      <option name="METHOD_NAME" value="test03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="practice.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
+      <option name="METHOD_NAME" value="test04" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -58,7 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.practice.test05" />
+        <item itemvalue="JUnit.practice" />
+        <item itemvalue="JUnit.practice.test04" />
+        <item itemvalue="JUnit.practice.test03" />
+        <item itemvalue="JUnit.practice.test02" />
+        <item itemvalue="JUnit.practice.test01" />
       </list>
     </recent_temporary>
   </component>

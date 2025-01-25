@@ -6,9 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
-
+import static practices.annotation_locators.annotations.driver;
 
 public class practice extends TestBase {
+
     // 1-) Senaryo: Google ana sayfasını açın, arama kutusunu locate edin ve görünür olduğunu doğrulayın.
     //Locator Yöntemi: name
 
@@ -51,6 +52,8 @@ public class practice extends TestBase {
 
     // 4-)Senaryo: Hepsiburada ana sayfasını açın, "Kategoriler" menüsünü locate edin ve görünür olduğunu doğrulayın.
     //Locator Yöntemi: cssSelector
+
+
 
     @Test
     void test04() {
