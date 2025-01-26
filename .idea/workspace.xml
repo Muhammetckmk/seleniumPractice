@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1779f2f0-03fb-4773-b4e9-7efcd6f004b2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/C01_Iframe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/annotations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/annotations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/locators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/practice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +33,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.C01_Iframe.test01.executor": "Run",
+    "JUnit.C01_OrtakDers.acceptAlert.executor": "Run",
+    "JUnit.C01_OrtakDers.dismissAlert.executor": "Run",
+    "JUnit.C01_OrtakDers.sendKeysAlert.executor": "Run",
     "JUnit.practice.test01.executor": "Run",
     "JUnit.practice.test02.executor": "Run",
     "JUnit.practice.test03.executor": "Run",
@@ -49,8 +49,8 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.practice.test04">
-    <configuration name="practice.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.C01_Iframe.test01">
+    <configuration name="C01_Alert.acceptAlert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seleniumPractices" />
       <extension name="coverage">
         <pattern>
@@ -59,40 +59,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="practices.annotation_locators" />
-      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.C01_Alert" />
+      <option name="METHOD_NAME" value="acceptAlert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C01_Alert.dismissAlert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.C01_Alert" />
+      <option name="METHOD_NAME" value="dismissAlert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C01_Alert.sendKeysAlert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.C01_Alert" />
+      <option name="METHOD_NAME" value="sendKeysAlert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C01_Iframe.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.C01_Iframe" />
       <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="practice.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seleniumPractices" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="practices.annotation_locators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
-      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
-      <option name="METHOD_NAME" value="test02" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="practice.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seleniumPractices" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="practices.annotation_locators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
-      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
-      <option name="METHOD_NAME" value="test03" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,10 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.C01_Iframe.test01" />
+        <item itemvalue="JUnit.C01_Alert.sendKeysAlert" />
+        <item itemvalue="JUnit.C01_Alert.dismissAlert" />
+        <item itemvalue="JUnit.C01_Alert.acceptAlert" />
         <item itemvalue="JUnit.practice.test04" />
-        <item itemvalue="JUnit.practice.test03" />
-        <item itemvalue="JUnit.practice.test02" />
-        <item itemvalue="JUnit.practice.test01" />
       </list>
     </recent_temporary>
   </component>
