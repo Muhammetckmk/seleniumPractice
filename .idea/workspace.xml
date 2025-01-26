@@ -7,6 +7,10 @@
     <list default="true" id="1779f2f0-03fb-4773-b4e9-7efcd6f004b2" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/C01_Iframe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" afterDir="false" />
+>>>>>>> 8645e3cb0a61bd95c04865aee8d68614aeb88bb2
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +35,7 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.C01_Iframe.test01.executor": "Run",
@@ -51,6 +56,40 @@
 }]]></component>
   <component name="RunManager" selected="JUnit.C01_Iframe.test01">
     <configuration name="C01_Alert.acceptAlert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.practice.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.practice.test01.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.practice.test02.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.practice.test03.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.practice.test04.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.practice">
+    <configuration name="practice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seleniumPractices" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practices.annotation_locators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="practices.annotation_locators" />
+      <option name="MAIN_CLASS_NAME" value="practices.annotation_locators.practice" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="practice.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 8645e3cb0a61bd95c04865aee8d68614aeb88bb2
       <module name="seleniumPractices" />
       <extension name="coverage">
         <pattern>
@@ -132,10 +171,14 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="JUnit.C01_Iframe.test01" />
         <item itemvalue="JUnit.C01_Alert.sendKeysAlert" />
         <item itemvalue="JUnit.C01_Alert.dismissAlert" />
         <item itemvalue="JUnit.C01_Alert.acceptAlert" />
+=======
+        <item itemvalue="JUnit.practice" />
+>>>>>>> 8645e3cb0a61bd95c04865aee8d68614aeb88bb2
         <item itemvalue="JUnit.practice.test04" />
       </list>
     </recent_temporary>

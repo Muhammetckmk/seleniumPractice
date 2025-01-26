@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
+import static practices.annotation_locators.annotations.driver;
+
 public class practice extends TestBase {
 
     // 1-) Senaryo: Google ana sayfasını açın, arama kutusunu locate edin ve görünür olduğunu doğrulayın.
@@ -29,9 +31,9 @@ public class practice extends TestBase {
     @Test
     void test02() throws InterruptedException {
         driver.get("https://amazon.com");
-       WebElement tikla = driver.findElement(By.cssSelector("input[type='text']"));
-       Thread.sleep(3000);
-       Assertions.assertTrue(tikla.isEnabled());
+        WebElement tikla = driver.findElement(By.cssSelector("input[type='text']"));
+        Thread.sleep(3000);
+        Assertions.assertTrue(tikla.isEnabled());
 
 
     }
@@ -51,6 +53,8 @@ public class practice extends TestBase {
     // 4-)Senaryo: Hepsiburada ana sayfasını açın, "Kategoriler" menüsünü locate edin ve görünür olduğunu doğrulayın.
     //Locator Yöntemi: cssSelector
 
+
+
     @Test
     void test04() {
         driver.get("https://Hepsiburada.com");
@@ -59,9 +63,15 @@ public class practice extends TestBase {
     }
 
 
-    // 5-)Senaryo: Twitter giriş sayfasını açın, şifre alanını locate edin ve içeriğinin boş olduğunu doğrulayın.
+    // 5-)Senaryo: facebook giriş sayfasını açın, şifre alanını locate edin ve içeriğinin boş olduğunu doğrulayın.
     //Locator Yöntemi: xpath
-
+    @Test
+    void test05() throws InterruptedException {
+        driver.get("https://facebook.com");
+        Thread.sleep(5000);
+        WebElement pass = driver.findElement(By.xpath("//input[@id='pass']"));
+        Assertions.assertNull(pass.getText());
+    }
 
     // 6-)Senaryo: YouTube ana sayfasını açın, arama kutusunu locate edin ve placeholder metninin "Search" olduğunu doğrulayın.
     //Locator Yöntemi: name

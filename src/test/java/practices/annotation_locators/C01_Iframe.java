@@ -35,6 +35,7 @@ public class C01_Iframe extends TestBase {
         WebElement text = driver.findElement(By.xpath("//p[text()='An iframe with a thin black border:']"));
         Assertions.assertTrue(text.getText().contains("black border"));
 
+        waitFor(2);
 
         // ayrica 'Applications lists' yazisinin sayfada oldugunu test edin
 
