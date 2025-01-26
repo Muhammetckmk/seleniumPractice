@@ -8,8 +8,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,6 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class TestBase {
+
 
     protected ExtentReports extentReports;//raporlamayi baslatir
     protected ExtentHtmlReporter extentHtmlReporter;// html formatinda rapor olusturur
@@ -254,7 +264,7 @@ public abstract class TestBase {
 
     //    EXPLICITLY WAIT FOR ELEMENT TO BE VISIBLE, SCROLL INTO THE ELEMENT, THEN CLICK BY JS
     public static void clickWithTimeoutByJS(WebElement element) {
-       // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", waitForVisibility(element, 5));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", waitForVisibility(element, 5));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
 
@@ -264,7 +274,7 @@ public abstract class TestBase {
                 element.click();
                 return;
             } catch (WebDriverException e) {
-                //waitFor(1);
+                waitFor(1);
             }
         }
     }
@@ -304,4 +314,168 @@ public abstract class TestBase {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         return ((WebElement) js.executeScript("return document.getElementById('" + id + "')"));
     }
+
+    /*
+    getting the VALUE of elements-useful to get the values of input elements where getText() doesn't work
+    param : id of the element
+    locating the element and returning the value of the element
+    return document.getElementById('"+id+"') -> RETURNS THE ELEMENT BY ID
+    return document.getElementById('"+id+"').value -> RETURNS THE VALUE ATTRIBUTE OF THE ELEMENT
+    toString() -> RETURN THE VALUE AS STRING
+     */
+    public static String getValueByJS(String id) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        return js.executeScript("return document.getElementById('" + id + "').value").toString();
+    }
+
+    /*
+    @param1 WebElement, @param2 String
+    type the string in that input element
+     */
+    public static void setValueByJS(WebElement inputElement, String text) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].setAttribute('value','" + text + "')", inputElement);
+    }
+
+    /*   HARD WAIT:
+@param : second
+*/
+    public static void waitFor(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /*
+ SELENIUM WAIT REUSABLE METHODS
+  */
+    //    DYNAMIC SELENIUM WAITS:
+    //===============Explicit Wait==============//
+    public static WebElement waitForVisibility(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static WebElement waitForVisibility(By locator, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static WebElement waitForClickablility(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static WebElement waitForClickablility(By locator, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    //======Fluent Wait====
+    // params : xpath of teh element , max timeout in seconds, polling in second
+    public static WebElement fluentWait(String xpath, int withTimeout, int pollingEvery) {
+        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(withTimeout))//Wait 3 second each time
+                .pollingEvery(Duration.ofSeconds(pollingEvery))//Check for the element every 1 second
+                .withMessage("Ignoring No Such Element Exception")
+                .ignoring(NoSuchElementException.class);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        return element;
+    }
+
+
+    //File Upload Robot Class
+    public void uploadFilePath(String dosyaYolu) {
+        try {
+            waitFor(3); // 3 saniye bekletir. Bu, kodun başka işlemler için hazır olmasını sağlar.
+            StringSelection stringSelection = new StringSelection(dosyaYolu);
+            //Verilen Dosya yolunu bir StringSelection objectine dönüştürürüz
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+            //verilen stringSelection'i (bu durumda dosya yolu), daha sonra başka bir yere yapıştırmak üzere sistem panosuna kopyalamaktır.
+            Robot robot = new Robot();
+            // Robot sınıfından bir object olustururuz, Bu class javadan gelir ve klavye ve mouse etkileşimlerini simüle eder.
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            // CTRL+V tuslarina basar dolayisiyla panodaki veriyi yapıştırır.
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyRelease(KeyEvent.VK_V);
+            // CTRL ve V tuşlarından elini kaldirir
+            robot.delay(3000);
+            // 3 saniye bekler, bu süre içerisinde yapıştırılan verinin işlenmesini sağlar.
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            // ENTER tuşuna basarak yapıştırma işlemini onaylar veya diyalog penceresini kapatır.
+            robot.delay(3000);
+            // Sonraki işlemler için ek 3 saniye bekler.
+        } catch (Exception ignored) {
+            // Herhangi bir hata oluşursa, bu hata yoksayılır.
+        }
+    }
+
+    /**
+     * Bu method tum sayfanin ekran görüntüsünü alir
+     */
+    public void takeScreenShot() {
+
+        try {
+            Files.createDirectories(Paths.get("screenShots"));
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            String date = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss").format(LocalDateTime.now());
+            Files.write(Paths.get("screenShots/image " + date + ".jpeg"), ts.getScreenshotAs(OutputType.BYTES));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    /**
+     * Bu method verilen weblementin ekran görüntüsünü alir
+     *
+     * @param webelement
+     */
+    public void screenShotOfWebElement(WebElement webelement) {
+        try {
+            Files.createDirectories(Paths.get("screenShots"));
+            String date = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss").format(LocalDateTime.now());
+            Files.write(Paths.get("screenShots/we_" + date + ".png"), webelement.getScreenshotAs(OutputType.BYTES));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Bu method tum sayfanin ekran görüntüsünü alir ve html rapora ekler
+     */
+    public void addScreenShotToReport() {
+        try {
+            Files.createDirectories(Paths.get("screenShots"));
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            String date = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss").format(LocalDateTime.now());
+            Files.write(Paths.get("screenShots/image " + date + ".jpeg"), ts.getScreenshotAs(OutputType.BYTES));
+            extentTest.addScreenCaptureFromPath(System.getProperty("user.dir")+"/screenShots/image " + date + ".jpeg");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Bu method verilen weblementin ekran görüntüsünü alir ve rapora ekler
+     *
+     * @param webelement
+     */
+    public void addScreenShotOfWebElementToReport(WebElement webelement) {
+        try {
+            Files.createDirectories(Paths.get("screenShots"));
+            String date = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss").format(LocalDateTime.now());
+            Files.write(Paths.get("screenShots/we_" + date + ".png"), webelement.getScreenshotAs(OutputType.BYTES));
+            extentTest.addScreenCaptureFromPath(System.getProperty("user.dir")+"/screenShots/we_" + date + ".png");
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
