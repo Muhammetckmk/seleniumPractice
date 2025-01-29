@@ -7,13 +7,7 @@
     <list default="true" id="1779f2f0-03fb-4773-b4e9-7efcd6f004b2" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/test/java/practices/annotation_locators/C01_Iframe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       <change beforePath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/TestBase.java" afterDir="false" />
->>>>>>> 8645e3cb0a61bd95c04865aee8d68614aeb88bb2
->>>>>>> e432c00141ee1373788c0a291df89cc932ccf325
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +32,6 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.C01_Iframe.test01.executor": "Run",
@@ -174,14 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
         <item itemvalue="JUnit.C01_Iframe.test01" />
         <item itemvalue="JUnit.C01_Alert.sendKeysAlert" />
         <item itemvalue="JUnit.C01_Alert.dismissAlert" />
         <item itemvalue="JUnit.C01_Alert.acceptAlert" />
-=======
         <item itemvalue="JUnit.practice" />
->>>>>>> 8645e3cb0a61bd95c04865aee8d68614aeb88bb2
         <item itemvalue="JUnit.practice.test04" />
       </list>
     </recent_temporary>
