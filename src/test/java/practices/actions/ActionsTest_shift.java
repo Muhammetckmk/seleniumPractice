@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-public class C05_ActionsTest extends TestBase {
+public class ActionsTest_shift extends TestBase {
     @Test
-    void test01() {
+    void shift() {
 
         //Google anasayfasına gidelim
         driver.get("https://google.com");
@@ -22,12 +22,9 @@ public class C05_ActionsTest extends TestBase {
                 .keyUp(Keys.SHIFT)//shift tusundan elini kaldirir
                 .sendKeys("java",Keys.ENTER)
                 .perform();
-
     }
-
     @Test
-    void test02() {
-
+    void shift01() {
         //Google anasayfasına gidelim
         driver.get("https://google.com");
 

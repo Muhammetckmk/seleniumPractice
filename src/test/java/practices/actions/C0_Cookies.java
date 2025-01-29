@@ -7,7 +7,7 @@ import utilities.TestBase;
 
 import java.util.Set;
 
-public class C02_Cookies extends TestBase {
+public class C0_Cookies extends TestBase {
       /*
     Cookie denildiginde aklima manage() methodu gelmeli.
     Cünkü cookieler ile  tum islemleri manage() methodu sayesinde yapabiliriz

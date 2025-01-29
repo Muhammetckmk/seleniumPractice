@@ -6,25 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-public class C04_ActionsTest extends TestBase {
+public class ActionsTest_drogAndDrop extends TestBase {
     //Go to https://jqueryui.com/droppable/
     //Drag me to my target webelement onto the Drop here webelement
 
     @Test
-    void test01() {
+    void drogAndDrop() {
         //https://jqueryui.com/droppable/ adresine gidelim
         driver.get("https://jqueryui.com/droppable/");
 
         //Drag me to my target webelementini Drop here webelementi üzerine bıkalım
+        Actions actions=new Actions(driver);
         driver.switchTo().frame(0);
-        Actions actions = new Actions(driver);
-        WebElement drag = driver.findElement(By.id("draggable"));
-        WebElement drop = driver.findElement(By.id("droppable"));
-        actions.dragAndDrop(drag,drop).perform();//drag webelementini alip drop webelementinin üzerine birakir
+        WebElement box1 = driver.findElement(By.id("draggable"));
+        WebElement box2 = driver.findElement(By.id("droppable"));
+        actions.dragAndDrop(box1,box2).perform();
+    waitFor(2);
     }
 
     @Test
-    void test02() {
+    void drogAndDrop02() {
         //https://jqueryui.com/droppable/ adresine gidelim
         driver.get("https://jqueryui.com/droppable/");
 
@@ -41,7 +42,7 @@ public class C04_ActionsTest extends TestBase {
     }
 
     @Test
-    void test03() {
+    void drogAndDrop03() {
         //https://jqueryui.com/droppable/ adresine gidelim
         driver.get("https://jqueryui.com/droppable/");
 
@@ -51,7 +52,7 @@ public class C04_ActionsTest extends TestBase {
         WebElement drag = driver.findElement(By.id("draggable"));
         WebElement drop = driver.findElement(By.id("droppable"));
         actions.clickAndHold(drag)
-                .moveByOffset(139,49)
+                .moveByOffset(170,35)
                 .release()
                 .perform();
     }
